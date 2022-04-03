@@ -1,0 +1,119 @@
+[
+    {
+"id": {
+    "M49": 20,
+    "ISO-3166-1-ALPHA-2": "AD",
+    "ISO-3166-1-ALPHA-3": "AND"
+},
+"nome": {
+    "abreviado": "Andorra",
+    "abreviado-EN": "Andorra",
+    "abreviado-ES": "Andorra"
+},
+"area": {
+    "total": "468",
+    "unidade": {
+        "nome": "quilômetros quadrados",
+        "símbolo": "km2",
+        "multiplicador": 1
+    }
+},
+"localizacao": {
+    "regiao": {
+        "id": {
+            "M49": 150
+        },
+        "nome": "Europa"
+    },
+    "sub-regiao": {
+        "id": {
+            "M49": 39
+        },
+        "nome": "Europa meridional  (Sul da Europa)"
+    },
+    "regiao-intermediaria": null
+},
+"linguas": [
+    {
+        "id": {
+            "ISO-639-1": "ca",
+            "ISO-639-2": "cat"
+        },
+        "nome": "Catalão"
+    }
+],
+"governo": {
+    "capital": {
+        "nome": "Andorra"
+    }
+},
+"unidades-monetarias": [
+    {
+        "id": {
+            "ISO-4217-ALPHA": "EUR",
+            "ISO-4217-NUMERICO": "978"
+        },
+        "nome": "Euro"
+    }
+],
+"historico": "O Principado de Andorra é um dos menores Estados da Europa, situado no alto dos Pireneus, entre as fronteiras francesa e espanhola. O primeiro documento que menciona Andorra é a Ata de Consagração da Catedral de Santa María de Urgell, de 839. Tal documento nomeia as freguesias do principado como feudo dos condes de Urgell.Por 715 anos, de 1278 a 1993, os andorranos foram governados por líderes franceses e espanhóis. Segundo a história registra, houve anos de intensa luta entre os condes vizinhos e a Igreja para ver quem conseguia soberania sobre Andorra. Passados esses anos, a assinatura dos tratados Pareatges, em 1278 e 1288, pelo arcebispo de Urgell, Pere d’Urg e o conde de Foix, Roger Bernart III, pôs fim às hostilidades e estabeleceu a soberania partilhada sobre o território. Em 1993, o sistema feudal foi modificado com a introdução de uma constituição moderna: os copríncipes permaneceram como chefes de Estado, mas o governo transformou-se em uma democracia parlamentar. Andorra se tornou um centro comercial internacional rico por causa do forte setor bancário e baixos impostos. Como parte de seus esforços para modernizar sua economia, se abriu ao investimento estrangeiro e se envolveu em outras reformas. Embora não seja membro da Unão Europeia, Andorra mantém uma relação especial com o bloco que é regido por vários acordos alfandegários e de cooperação. Fontes: http://visitandorra.com/pt/o-pais/um-pouco-de-historia/ https://www.cia.gov/library/publications/the-world-factbook/geos/an.html"
+},
+{
+"id": {
+    "M49": 784,
+    "ISO-3166-1-ALPHA-2": "AE",
+    "ISO-3166-1-ALPHA-3": "ARE"
+},
+"nome": {
+    "abreviado": "Emirados Árabes Unidos",
+    "abreviado-EN": "United Arab Emirates",
+    "abreviado-ES": "Emiratos Árabes Unidos"
+},
+"area": {
+    "total": "83600",
+    "unidade": {
+        "nome": "quilômetros quadrados",
+        "símbolo": "km2",
+        "multiplicador": 1
+    }
+},
+"localizacao": {
+    "regiao": {
+        "id": {
+            "M49": 142
+        },
+        "nome": "Ásia"
+    },
+    "sub-regiao": {
+        "id": {
+            "M49": 145
+        },
+        "nome": "Ásia ocidental  (Oeste da Ásia)"
+    },
+    "regiao-intermediaria": null
+},
+"linguas": [
+    {
+        "id": {
+            "ISO-639-1": "ar",
+            "ISO-639-2": "ara"
+        },
+        "nome": "Árabe"
+    }
+],
+"governo": {
+    "capital": {
+        "nome": "Abu Dhabi"
+    }
+},
+"unidades-monetarias": [
+    {
+        "id": {
+            "ISO-4217-ALPHA": "AED",
+            "ISO-4217-NUMERICO": "784"
+        },
+        "nome": "Dirham dos Emirados Árabes Unidos"
+    }
+],
+"historico": "Os Emirados Árabes Unidos constituem um país localizado no Golfo Pérsico, território asiático. Entre o final do século XVIII e o início do século XIX, a facção tribal dominante era o Āl Qawāsim, cujos navios controlavam o comércio marítimo. Ataques a navios britânicos e indianos levaram a um ataque naval britânico em 1819, que derrotou as forças Qawāsim, fazendo com que os britânicos se tornassem dominantes na região. Quando Āl Qawāsim perdeu poder e influência na região, a confederação tribal de Banū Yās tornou-se dominante. Eles se concentraram nos oásis de Al-ʿAyn e Al-Liwāʾ de Abū Ẓaby, com sua força baseada na terra. Tinham a liderança do Āl Nahyān, e tornaram-se poderosos na região desde meados do século XIX.Os principais xeques de toda a Costa do Golfo Pérsico assinaram uma série de acordos durante aquele século (um tratado geral de paz em 1820, a trégua marítima perpétua em 1853 e acordos exclusivos em 1892 restringindo suas relações estrangeiras aos britânicos), ficando conhecidos como os Estados da Trégua. Os Estados da Costa do Golfo Pérsico concederam ao Reino Unido o controle de suas defesas e relações exteriores nos tratados do século XIX. Em 1971, seis desses estados – Abu Dhabi, ‘Ajman, Al Fujayrah, Ash Shariqah, Dubayy e Umm Al Qaywayn – resolveram se fundir para formar os Emirados Árabes Unidos, vindo a se juntar efetivamente em 1972 por Ra’s al Khaymah. Fontes:https://www.britannica.com/place/United-Arab-Emirates/History https://www.cia.gov/library/publications/the-world-factbook/geos/ae.html"
+}]
