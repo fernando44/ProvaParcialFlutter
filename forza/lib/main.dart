@@ -1,15 +1,20 @@
-import 'package:flutter/material.dart';
-import 'view/tela_principal.dart';
+import 'dart:js';
 
-void main() {
+import 'package:flutter/material.dart';
+import 'package:forza/view/login.dart';
+import 'package:forza/view/marcas.dart';
+import 'view/tela_inicial.dart';
+
+void main(List<String> args) {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'forza',
-      initialRoute: 't1',
+      title: 'Forza',
+      initialRoute: 'TelaInicial',
       routes: {
-        't1' : (context) => const TelaPrincipal(),
-        //'t2' : (context) => const TelaDetalhes(),
+        'TelaInicial' : (context) => const TelaPrincipal(),
+        'login' : (context) => const LoginPage(),
+        'marcas' : (context) => const Marcas(),
       },
     )
   );
