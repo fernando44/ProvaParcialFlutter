@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                         var usr = txtUsuario.text.toUpperCase();
                         var pwd = txtSenha.text;
 
-                        if ((usr == 'ANDROID' || usr == '') && pwd == 'android') {
+                        if ((usr == '' || usr == '') && pwd == '') {
                          
                           Navigator.pushNamed(
                             context,
