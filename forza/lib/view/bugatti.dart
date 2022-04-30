@@ -28,10 +28,10 @@ class _Bugatti extends State<Bugatti> {
             onPressed: () {
               Navigator.pushNamed(
                 context,
-                'marcas',
+                'type35c1926',
               );
             },
-            child: const Text("Bugatti"),
+            child: const Text("Type 35 C 1926"),
             
           ),
         ),
@@ -47,7 +47,7 @@ class _Bugatti extends State<Bugatti> {
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
             onPressed: () {},
-            child: const Text("Dodge"),
+            child: const Text("EB110 Super Sport 1992"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),
@@ -63,7 +63,7 @@ class _Bugatti extends State<Bugatti> {
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
             onPressed: () {},
-            child: const Text("Cadillac"),
+            child: const Text("Veyron Super Sport 2011"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),
@@ -79,7 +79,23 @@ class _Bugatti extends State<Bugatti> {
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
             onPressed: () {},
-            child: const Text("Ferrari"),
+            child: const Text("Chiron 2018"),
+            //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
+          ),
+        ),
+
+        const SizedBox(height: 10),// espaco entre os btn
+
+        ButtonTheme(
+          minWidth: 200.0,
+          height: 100.0,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: const Color.fromARGB(255, 48, 189, 255), // background
+              onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
+            ),
+            onPressed: () {},
+            child: const Text("Divo 2019"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),

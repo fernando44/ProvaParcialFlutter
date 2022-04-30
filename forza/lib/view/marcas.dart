@@ -28,7 +28,7 @@ class _Marcas extends State<Marcas> {
             onPressed: () {
               Navigator.pushNamed(
                 context,
-                'marcas',
+                'bugatti',
               );
             },
             child: const Text("Bugatti"),
