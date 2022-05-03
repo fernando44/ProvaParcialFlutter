@@ -48,7 +48,7 @@ class _type35c1926 extends State<type35c1926> {
                   ),
                 ),
                 Text(	
-                  'O Type 35 C é uma variante do Type 35, o modelo de corrida de maior sucesso da Bugatti.',
+                  'Ettore Bugatti começou a construir máquinas na virada do século 20 e estava à frente de seu tempo. Quando começou a construir carros de corrida como o Type 35, não demorou muito para que seus carros dominassem todas as corridas. O modelo de 1926 foi o segundo a utilizar um supercharger, essa adição tornou a marca uma lenda nas corridas. Este foi o terceiro ano do Type 35, e é movido por um motor de oito cilindros em linha de 2,0 litros. Esse carro pode ser comprado com o revendedor de automóveis por 1.300.000 CR.',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class _type35c1926 extends State<type35c1926> {
                 ),
 
                 Text(	
-                  'Velocidade: 4.2',
+                  'Velocidade: 4.0/Manejo: 3.4/Aceleração: 2.5/Lançamento: 1.4/Frenagem: 1.9/Off-Road: 4.9',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -99,7 +99,14 @@ class _type35c1926 extends State<type35c1926> {
                   ),
                 ),
                 Text(	
-                  'Motor: 2.0L Supercharged V8',
+                  'Motor: 2.0L de 95HP com transmissão original de 4 marchas.',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(	
+                  'Classificação: D 285',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

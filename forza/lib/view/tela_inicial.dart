@@ -72,9 +72,32 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                     OutlinedButton(//btn cadastro
                       style: OutlinedButton.styleFrom(
                           backgroundColor: Colors.grey),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(//chama a tela de login
+                            context,
+                            'cadastro',                           
+                          );
+                      },
                       child: Text(
                         'Cadastro',
+                        style: TextStyle(color: Colors.red.shade800),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 8.0,
+                    ),
+
+                    OutlinedButton(//btn cadastro
+                      style: OutlinedButton.styleFrom(
+                          backgroundColor: Colors.grey),
+                      onPressed: () {
+                        Navigator.pushNamed(//chama a tela de login
+                            context,
+                            'sobre',                           
+                          );
+                      },
+                      child: Text(
+                        'Sobre',
                         style: TextStyle(color: Colors.red.shade800),
                       ),
                     ),
