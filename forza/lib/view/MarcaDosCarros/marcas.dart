@@ -16,7 +16,7 @@ class _Marcas extends State<Marcas> {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20), //pading em relação as bordas
       children: <Widget>[
         
-        ButtonTheme(
+        ButtonTheme(//em uso não retirar
           minWidth: 200.0,
           height: 100.0,
           buttonColor: Colors.white,
@@ -38,7 +38,7 @@ class _Marcas extends State<Marcas> {
 
         const SizedBox(height: 10),// espaco entre os btn
 
-        ButtonTheme(
+        ButtonTheme(//em uso não retirar
           minWidth: 200.0,
           height: 100.0,
           child: ElevatedButton(
@@ -46,8 +46,13 @@ class _Marcas extends State<Marcas> {
               primary: const Color.fromARGB(255, 48, 189, 255), // background
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
-            onPressed: () {},
-            child: const Text("Dodge"),
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                'cadillac',
+              );
+            },
+            child: const Text("Cadillac"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),
@@ -63,7 +68,7 @@ class _Marcas extends State<Marcas> {
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
             onPressed: () {},
-            child: const Text("Cadillac"),
+            child: const Text("Chevrolet"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),

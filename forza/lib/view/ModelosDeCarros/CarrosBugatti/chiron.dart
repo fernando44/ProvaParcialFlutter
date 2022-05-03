@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class type35c1926 extends StatefulWidget {
-  const type35c1926({Key? key}) : super(key: key);
+class chiron extends StatefulWidget {
+  const chiron({Key? key}) : super(key: key);
 
   @override
-  State<type35c1926> createState() => _type35c1926();
+  State<chiron> createState() => _chiron();
 }
 
 // ignore: camel_case_types
-class _type35c1926 extends State<type35c1926> {
+class _chiron extends State<chiron> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,22 +19,22 @@ class _type35c1926 extends State<type35c1926> {
             child: Column(
               children: [
                 const Text(	
-                  'Type 35 C 1926',
+                  'chiron',
                   style: TextStyle(
                     color: Color.fromARGB(255, 165, 13, 13),
-                    fontSize: 36,
+                    fontSize: 26,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 const Image(
-                  image: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6iLizDC8Jn15HegKJ8_F6LOsZA9JLY15llwQ6bs4obHl_rX_yolZ32rlD98iSjfjiASQ&usqp=CAU'),
+                  image: NetworkImage('https://cdnb.artstation.com/p/assets/images/images/012/882/367/large/rico-yupita-chiron-2.jpg?1536989817'),
                 ),
                 Text(	
-                  'Bugatti 1926 Race Car, France',
+                  'Bugatti 2018 Production Car, France',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     color: Color.fromARGB(255, 55, 29, 80),
-                    fontSize: 10,
+                    fontSize: 8,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -43,14 +43,14 @@ class _type35c1926 extends State<type35c1926> {
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     color: Color.fromARGB(255, 165, 13, 13),
-                    fontSize: 26,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(	
-                  'Ettore Bugatti começou a construir máquinas na virada do século 20 e estava à frente de seu tempo. Quando começou a construir carros de corrida como o Type 35, não demorou muito para que seus carros dominassem todas as corridas. O modelo de 1926 foi o segundo a utilizar um supercharger, essa adição tornou a marca uma lenda nas corridas. Este foi o terceiro ano do Type 35, e é movido por um motor de oito cilindros em linha de 2,0 litros. Esse carro pode ser comprado com o revendedor de automóveis por 1.300.000 CR.',
+                  'O Chiron pode representar o pico absoluto de desempenho do motor de combustão interna, especialmente quando você considera os feitos surpreendentes de engenharia que atuaram em sua construção. O Chiron tem quatro turbos, dez radiadores; ele pode atingir uma velocidade máxima limitada eletronicamente de 420 Km/h e pode consumir seu tanque de combustível de 26,4 galões em menos de sete minutos. Claro, o Chiron pode ser lançado de 100 a 200 mph com o que parece ser a força de aceleração de um míssil balístico, mas este hipercarro Bugatti também é conhecido por excelente manuseio, graças em parte ao novo chassi monocoque de fibra de carbono. Há muitas outras estatísticas a serem consideradas, mas a melhor maneira de vivenciar esse marco na engenharia automotiva é conduzindo-o. Este carro pode ser comprado com o revendedor de automóveis por 2.400.000 CR.',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -58,57 +58,64 @@ class _type35c1926 extends State<type35c1926> {
                   'Caracteristicas',
                   style: TextStyle(
                     color: Color.fromARGB(255, 165, 13, 13),
-                    fontSize: 26,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
 
                 Text(	
-                  'Velocidade: 4.0/Manejo: 3.4/Aceleração: 2.5/Lançamento: 1.4/Frenagem: 1.9/Off-Road: 4.9',
+                  'Velocidade: 10',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                Text(	
-                  'Manipulação: 4.2',
+                  'Manejo: 7.9',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(	
-                  'Aceleração: 5.5',
+                  'Aceleração: 9.9',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(	
-                  'Frenagem: 4.0',
+                  'Lançamento: 6.1',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(	
-                  'Peso: 1676 lbs  (760 kg)',
+                  'Frenagem: 8.6',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(	
-                  'Motor: 2.0L de 95HP com transmissão original de 4 marchas.',
+                  'Off-Road: 5.0',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(	
-                  'Classificação: D 285',
+                  'Motor: V16 8.0L com transmissão de 7 velocidades.',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(	
+                  'Classificação: S2 927',
+                  style: TextStyle(
+                    fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
