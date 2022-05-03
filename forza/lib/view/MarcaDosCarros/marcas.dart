@@ -13,10 +13,11 @@ class _Marcas extends State<Marcas> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20), //pading em relação as bordas
+      padding: const EdgeInsets.symmetric(
+          horizontal: 10, vertical: 20), //pading em relação as bordas
       children: <Widget>[
-        
-        ButtonTheme(//em uso não retirar
+        ButtonTheme(
+          //em uso não retirar
           minWidth: 200.0,
           height: 100.0,
           buttonColor: Colors.white,
@@ -32,13 +33,13 @@ class _Marcas extends State<Marcas> {
               );
             },
             child: const Text("Bugatti"),
-            
           ),
         ),
 
-        const SizedBox(height: 10),// espaco entre os btn
+        const SizedBox(height: 10), // espaco entre os btn
 
-        ButtonTheme(//em uso não retirar
+        ButtonTheme(
+          //em uso não retirar
           minWidth: 200.0,
           height: 100.0,
           child: ElevatedButton(
@@ -57,7 +58,7 @@ class _Marcas extends State<Marcas> {
           ),
         ),
 
-        const SizedBox(height: 10),// espaco entre os btn
+        const SizedBox(height: 10), // espaco entre os btn
 
         ButtonTheme(
           minWidth: 200.0,
@@ -67,13 +68,15 @@ class _Marcas extends State<Marcas> {
               primary: const Color.fromARGB(255, 48, 189, 255), // background
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, 'chevrolet');
+            },
             child: const Text("Chevrolet"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),
 
-        const SizedBox(height: 10),// espaco entre os btn
+        const SizedBox(height: 10), // espaco entre os btn
 
         ButtonTheme(
           minWidth: 200.0,
@@ -83,12 +86,13 @@ class _Marcas extends State<Marcas> {
               primary: const Color.fromARGB(255, 48, 189, 255), // background
               onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
             ),
-            onPressed: () {},
-            child: const Text("Ferrari"),
+            onPressed: () {
+              Navigator.pushNamed(context, 'dodge');
+            },
+            child: const Text("Dodge"),
             //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
           ),
         ),
-
       ],
     );
   }
