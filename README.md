@@ -2,4 +2,4 @@
 Projeto em desenvolvimento para a prova parcial de flutter
 ## Desenvolvedores:
 ### Fernando Chiareli Ferreira - 832110 
-### Matheus Nicolussi
+### Mateus Nicolussi - 831823
