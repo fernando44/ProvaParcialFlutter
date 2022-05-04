@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../NavBar.dart';
+
 class cadillac extends StatefulWidget {
   const cadillac({Key? key}) : super(key: key);
 
@@ -13,30 +15,39 @@ class cadillac extends StatefulWidget {
 class _cadillac extends State<cadillac> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 10, vertical: 20), 
-      children: <Widget>[
-        ButtonTheme(
-          //em uso não retirar
-          minWidth: 200.0,
-          height: 100.0,
-          buttonColor: Colors.white,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: const Color.fromARGB(255, 48, 189, 255), // background
-              onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
-            ),
-            onPressed: () {
-              Navigator.pushNamed(
-                context,
-                'cts_v_sedan',
-              );
-            },
-            child: const Text("CTS-V Sedan"),
-          ),
+    return Scaffold(
+        drawer: NavigationDrawerWidget(),
+        appBar: AppBar(
+          backgroundColor: Colors.pink,
+          title: Text('Cadillac - Modelos'),
+          centerTitle: true,
         ),
-      ],
-    );
+        backgroundColor: Colors.grey.shade400,
+        body: Container(
+          child: ListView(
+            padding: const EdgeInsets.symmetric(horizontal: 400, vertical: 20),
+            children: <Widget>[
+              ButtonTheme(
+                //em uso não retirar
+                minWidth: 200.0,
+                height: 100.0,
+                buttonColor: Colors.white,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.pink, // background
+                    onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      'cts_v_sedan',
+                    );
+                  },
+                  child: const Text("CTS-V Sedan"),
+                ),
+              ),
+            ],
+          ),
+        ));
   }
 }

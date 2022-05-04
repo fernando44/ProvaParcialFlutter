@@ -15,14 +15,13 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [       
+          children: [
             const Icon(
               Icons.directions_car,
               size: 50,
               color: Colors.black,
             ),
             const Text('Forza Horizon 5 - Guia'),
-
             const Icon(
               Icons.directions_car,
               size: 50,
@@ -31,7 +30,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           ],
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue.shade600,
+        backgroundColor: Colors.pink,
       ),
 
       //corpo do projeto
@@ -52,14 +51,16 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    OutlinedButton(//btn login
+                    OutlinedButton(
+                      //btn login
                       style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.grey.shade500),
+                          backgroundColor: Colors.grey.shade100),
                       onPressed: () {
-                          Navigator.pushNamed(//chama a tela de login
-                            context,
-                            'login',                           
-                          );
+                        Navigator.pushNamed(
+                          //chama a tela de login
+                          context,
+                          'login',
+                        );
                       },
                       child: Text(
                         'Login',
@@ -69,14 +70,16 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                     const SizedBox(
                       width: 8.0,
                     ),
-                    OutlinedButton(//btn cadastro
+                    OutlinedButton(
+                      //btn cadastro
                       style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.grey),
+                          backgroundColor: Colors.grey.shade100),
                       onPressed: () {
-                        Navigator.pushNamed(//chama a tela de login
-                            context,
-                            'cadastro',                           
-                          );
+                        Navigator.pushNamed(
+                          //chama a tela de login
+                          context,
+                          'cadastro',
+                        );
                       },
                       child: Text(
                         'Cadastro',
@@ -86,15 +89,16 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                     const SizedBox(
                       width: 8.0,
                     ),
-
-                    OutlinedButton(//btn cadastro
+                    OutlinedButton(
+                      //btn cadastro
                       style: OutlinedButton.styleFrom(
-                          backgroundColor: Colors.grey),
+                          backgroundColor: Colors.grey.shade100),
                       onPressed: () {
-                        Navigator.pushNamed(//chama a tela de login
-                            context,
-                            'sobre',                           
-                          );
+                        Navigator.pushNamed(
+                          //chama a tela de login
+                          context,
+                          'sobre',
+                        );
                       },
                       child: Text(
                         'Sobre',
