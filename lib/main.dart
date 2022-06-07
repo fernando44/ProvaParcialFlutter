@@ -22,8 +22,13 @@ import 'package:forza/view/MarcaDosCarros/marcas.dart';
 import 'package:forza/view/sobre.dart';
 import 'package:forza/view/ModelosDeCarros/CarrosBugatti/type_35_c_1926.dart';
 import 'view/tela_inicial.dart';
-
-void main(List<String> args) {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+Future<void> main(List<String> args) async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'Forza',
