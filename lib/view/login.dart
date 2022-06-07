@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'widgets/mensagem.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -106,6 +107,9 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
+
+      
+
     );
   }
 }
