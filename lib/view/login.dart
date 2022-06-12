@@ -9,107 +9,110 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  var txtUsuario = TextEditingController();
+  var txtEmail = TextEditingController();
   var txtSenha = TextEditingController();
+  bool isLoading = false;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
-        automaticallyImplyLeading: true,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            /*Vai retornar a tela anterior a essa, nao mexer*/
-            Navigator.pop(context);
-          },
+        title: const Text('Login'),
+        centerTitle: true,
+        backgroundColor: Colors.red.shade800,
+      ),
+      backgroundColor: Colors.brown[50],
+      body: Container(
+        padding: const EdgeInsets.all(50),
+        child: ListView(
+          children: [
+            campoTexto('Email', txtEmail, Icons.email),
+            const SizedBox(height: 20),
+            campoTexto('Senha', txtSenha, Icons.lock, senha: true),
+            const SizedBox(height: 40),
+            OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                primary: Colors.white,
+                minimumSize: const Size(200, 45),
+                backgroundColor: Colors.red.shade800,
+              ),
+              child: const Text('entrar'),
+              onPressed: () {
+                login(txtEmail.text, txtSenha.text);
+              },
+            ),
+            const SizedBox(height: 50),
+            TextButton(
+              style: OutlinedButton.styleFrom(
+                primary: Colors.red.shade800,
+              ),
+              child: const Text('Criar conta'),
+              onPressed: () {
+                Navigator.pushNamed(context, 'cadastro');
+              },
+            ),
+          ],
         ),
       ),
-      body: Container(
-        color: Colors.grey.shade400,
-        padding: EdgeInsets.all(30),
-        child: Center(
-          child: Container(
-            child: Column(
-              children: [
-                Text(
-                  'Login',
-                  style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                TextField(
-                  controller: txtUsuario,
-                  style: TextStyle(
-                    fontSize: 32,
-                  ),
-                  decoration: InputDecoration(
-                    labelText: 'Usuário',
-                    labelStyle: TextStyle(
-                      fontSize: 24,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextField(
-                  controller: txtSenha,
-                  obscureText: true,
-                  style: TextStyle(
-                    fontSize: 32,
-                  ),
-                  decoration: InputDecoration(
-                    labelText: 'Senha',
-                    labelStyle: TextStyle(
-                      fontSize: 24,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Container(
-                  color: Colors.white,
-                  width: 200,
-                  child: OutlinedButton(
-                    onPressed: () {
-                      setState(() {
-                        var usr = txtUsuario.text.toUpperCase();
-                        var pwd = txtSenha.text;
-                        var usuPadrao = 'android';
-                        var senPadrao = 'android';
+    );
+  }
 
-                        if ((usr == '' || usr == '') && pwd == '') {
-                          Navigator.pushNamed(
-                            context,
-                            'marcas',
-                          );
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Usuário e/ou senha inválidos.'),
-                            ),
-                          );
-                        }
-                      });
-                    },
-                    child: Text('Entrar'),
-                  ),
-                ),
-              ],
-            ),
+  //
+  // CAMPO DE TEXTO
+  //
+  campoTexto(texto, controller, icone, {senha}) {
+    return TextField(
+      controller: controller,
+      obscureText: senha != null ? true : false,
+      style: const TextStyle(
+        color: Colors.brown,
+        fontWeight: FontWeight.w300,
+      ),
+      decoration: InputDecoration(
+        prefixIcon: Icon(icone, color: Colors.brown),
+        prefixIconColor: Colors.brown,
+        labelText: texto,
+        labelStyle: const TextStyle(color: Colors.brown),
+        border: const OutlineInputBorder(),
+        focusColor: Colors.brown,
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.brown,
+            width: 0.0,
           ),
         ),
       ),
-
-      
-
     );
+  }
+
+  //
+  // LOGIN com Firebase Auth
+  //
+  void login(email, senha) {
+    FirebaseAuth.instance
+        .signInWithEmailAndPassword(email: email, password: senha)
+        .then((res) {
+      sucesso(context, 'Usuário autenticado com sucesso!');
+
+      Navigator.pushReplacementNamed(context, 'marcas');
+      
+    }).catchError((e) {
+      //print('LOGIN ERRO: ' + e.code.toString());
+
+      switch (e.code) {
+        case 'invalid-email':
+          erro(context, 'O formato do email é inválido.');
+          break;
+        case 'user-not-found':
+          erro(context, 'Usuário não encontrado.');
+          break;
+        case 'wrong-password':
+          erro(context, 'Senha incorreta.');
+          break;
+        default:
+          erro(context, e.code.toString());
+      }
+    });
   }
 }
