@@ -1,7 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forza/view/NavBar.dart';
+
 
 class Marcas extends StatefulWidget {
   const Marcas({Key? key}) : super(key: key);
@@ -11,13 +13,19 @@ class Marcas extends StatefulWidget {
 }
 
 class _Marcas extends State<Marcas> {
+  
+
+}
+  /*
+  get firestoreInstance => null;
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return Scaffold(
         drawer: NavigationDrawerWidget(),
         appBar: AppBar(
           backgroundColor: Colors.pink,
-          title: Text('Marcas'),
+          title: const Text('Marcas'),
           centerTitle: true,
         ),
         body: Container(
@@ -97,7 +105,12 @@ class _Marcas extends State<Marcas> {
                     onPrimary: const Color.fromARGB(255, 0, 0, 0), // foreground
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, 'dodge');
+                    firestoreInstance.collection("Modelos").get().then((querySnapshot) {
+                      querySnapshot.docs.forEach((result) {
+                        print(result.data());
+                      });
+                    });
+                    //Navigator.pushNamed(context, 'dodge');
                   },
                   child: const Text("Dodge"),
                   //child: Image.asset('lib/img/marcasLogoTst.png'), // coloca uma imagem ao inves do texto
