@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,9 +14,12 @@ class cadastro extends StatefulWidget {
 
 // ignore: camel_case_types
 class _cadastro extends State<cadastro> {
+  var txtCpf = TextEditingController();
+  var txtTelefone = TextEditingController();
   var txtNome = TextEditingController();
   var txtEmail = TextEditingController();
   var txtSenha = TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +34,10 @@ class _cadastro extends State<cadastro> {
         child: ListView(
           children: [
             campoTexto('Nome', txtNome, Icons.people),
+            const SizedBox(height: 20),
+            campoTexto('Cpf', txtCpf, Icons.perm_identity),
+            const SizedBox(height: 20),
+            campoTexto('Telefone', txtTelefone, Icons.add_call),
             const SizedBox(height: 20),
             campoTexto('Email', txtEmail, Icons.email),
             const SizedBox(height: 20),
@@ -47,7 +56,7 @@ class _cadastro extends State<cadastro> {
                     ),
                     child: const Text('criar'),
                     onPressed: () {
-                      criarConta(txtNome.text, txtEmail.text, txtSenha.text);
+                      criarConta(txtNome.text, txtCpf.text, txtTelefone.text, txtEmail.text, txtSenha.text);
                     },
                   ),
                 ),
@@ -102,16 +111,19 @@ class _cadastro extends State<cadastro> {
   //
   // CRIAR CONTA no Firebase Auth
   //
-  void criarConta(nome, email, senha) {
+  void criarConta(nome, cpf, telefone, email, senha) {
     FirebaseAuth.instance
         .createUserWithEmailAndPassword(email: email, password: senha)
         .then((res) {
       //Armazenar o nome completo no Firestore
       //print('UID: ' + res.user!.uid.toString());
-      FirebaseFirestore.instance.collection('usuarios').add(
+      FirebaseFirestore.instance.collection('Cadastro').add(
         {
-          'uid': res.user!.uid.toString(),
-          'nome': nome,
+          'UID': res.user!.uid.toString(),
+          'NOME': nome,
+          'CPF': cpf,
+          'TELEFONE': telefone,       
+          
         },
       );
 
